@@ -29,13 +29,10 @@ public class ShutDown {
 
 	public ShutDown(int serverPort) {
 		try {
-			// ��ָ��������(IP���˿�)��������
 			socket = new Socket("127.0.0.1", serverPort);
-			// �õõ��ĻỰ���������������
 			reader = new BufferedReader(new InputStreamReader(socket
 					.getInputStream()));
 			writer = new PrintWriter(socket.getOutputStream());
-			// ����Ϣͨ����������͸������
 			writer.println("shutdown");
 			writer.flush();
 			writer.close();
