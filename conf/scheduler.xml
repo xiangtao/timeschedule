@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Jobs threadCount="30" appName="test">
+	<Job name="job1" stateful="true">
+		<class>com.deve.timeschedule.EmptyJob</class>
+		<params>
+			<param>
+				<name>string</name>
+				<value>123</value>
+			</param>
+		</params>
+		<trigger>
+			<type>cron</type>
+			<value>0/1 * * ? * *</value>
+		</trigger>
+	</Job>
+</Jobs>

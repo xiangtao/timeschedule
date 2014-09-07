@@ -1,0 +1,1 @@
+`java -cp ../common/taskplugin-0.0.1.jar:../common/log4j-1.2.14.jar:../conf/ com.deve.timescheduler.ShutDown`

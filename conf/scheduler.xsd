@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+	<!--
+		Generated using Flame-Ware Solutions XML-2-XSD v2.0 at
+		http://www.flame-ware.com/Products/XML-2-XSD/
+	-->
+<xs:schema id="Jobs" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+	<xs:simpleType name="triggerType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="cron|simple" />
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:element name="Jobs" msdata:IsDataSet="true"
+		msdata:UseCurrentLocale="true">		
+		
+		<xs:complexType>
+			<xs:sequence>
+			<xs:element name="listener" type="xs:string" minOccurs="0" maxOccurs="1"/>		
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				
+				<xs:element name="Job">					
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="class" type="xs:string" minOccurs="0" />
+							<xs:element name="params" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="param" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="name" type="xs:string"
+														minOccurs="0" />
+													<xs:element name="value" type="xs:string"
+														minOccurs="0" />
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="trigger" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="type" type="triggerType" minOccurs="0" />
+										<xs:element name="value" type="xs:string"
+											minOccurs="0" />
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="name" type="xs:string" />
+						<xs:attribute name="stateful" type="xs:boolean" />
+					</xs:complexType>
+					
+				</xs:element>
+			</xs:choice>
+			</xs:sequence>
+			<xs:attribute name="appName" type="xs:string" />
+			<xs:attribute name="threadCount" type="xs:int" />
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

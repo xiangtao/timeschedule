@@ -1,0 +1,124 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.deve</groupId>
+  <artifactId>timeschedule</artifactId>
+  <version>0.0.1</version>
+  <packaging>jar</packaging>
+  <name>timeschedule</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  
+ <build>
+		<plugins>
+			<plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+			<plugin>
+		        <groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-jar-plugin</artifactId>
+		        <version>2.4</version>
+		        <executions>
+		          <execution>
+		          	<id>default-jar</id>
+		            <phase>package</phase>
+		            <goals>
+		              <goal>jar</goal>
+		            </goals>
+		            <configuration>
+		              <excludes>
+		              	  <exclude>**/*.properties</exclude>
+		              </excludes>
+		            </configuration>
+		          </execution>
+		        </executions>
+      		</plugin>
+      
+			<!-- <plugin> 
+	            <artifactId>maven-dependency-plugin</artifactId> 
+	            <executions> 
+				    <execution> 
+				        <id>copy-dependencies</id> 
+				        <phase>package</phase> 
+				        <goals> 
+				            <goal>copy-dependencies</goal> 
+				        </goals> 
+				        <configuration> 
+				            <outputDirectory>${project.build.directory}/lib</outputDirectory> 
+				            <excludeTransitive>false</excludeTransitive> 
+				            <stripVersion>false</stripVersion> 
+				        </configuration> 
+				    </execution> 
+				</executions>
+	        </plugin>  -->
+	        
+	        <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <appendAssemblyId>false</appendAssemblyId>
+                    <descriptors>
+                        <descriptor>src/main/assembly/package.xml</descriptor>
+                    </descriptors>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+		</plugins>
+	</build>
+	<dependencies>
+	
+	<dependency>
+		  <groupId>commons-httpclient</groupId>
+		  <artifactId>commons-httpclient</artifactId>
+		  <version>3.0.1</version>
+		</dependency>
+		<dependency>
+		  <groupId>cglib</groupId>
+		  <artifactId>cglib</artifactId>
+		  <version>2.1_3</version>
+		</dependency>
+		
+		<dependency>
+		  <groupId>commons-lang</groupId>
+		  <artifactId>commons-lang</artifactId>
+		  <version>2.0</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.quartz-scheduler</groupId>
+		    <artifactId>quartz</artifactId>
+		    <version>1.8.3</version>
+		</dependency>
+		
+		<dependency>
+		  <groupId>org.jvnet.opendmk</groupId>
+		  <artifactId>jmxremote_optional</artifactId>
+		  <version>1.0_01-ea</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.10</version>
+			<scope>test</scope>
+		</dependency>
+		
+	</dependencies>
+	
+</project>
