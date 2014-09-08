@@ -14,12 +14,17 @@ timeschedule 一个简单的定时任务调度容器，可以满足需要定时�
 6. cd bin, ./startup.sh to start timeschedule
 
 ### configure own job
+```
 * conf/scheduler.xml to configure job
-1. ```<job></job> ```label mean one job <class> is your Job implement for CoreJob,necessary
-2. <params> config your job required paramter,not necessary.
-3. <trigger> config crontab expression,necessary
+1. <job></job> label mean one job 
+2. <class></class> is your Job implement for CoreJob,necessary
+2. <params></params> config your job required paramter,not necessary.
+3. <trigger></trigger> config crontab expression,necessary
+```
+
 example:
-...
+
+```
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Jobs threadCount="30" appName="test">
 	<Job name="job1" stateful="true">
@@ -36,7 +41,9 @@ example:
 		</trigger>
 	</Job>
 </Jobs>
-...
+```
+
+
 
 ## How to run in local
 1. git clone git@github.com:xiangtao/timeschedule.git
