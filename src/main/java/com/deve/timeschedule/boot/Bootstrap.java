@@ -145,7 +145,7 @@ public class Bootstrap {
 			IllegalArgumentException, InvocationTargetException,
 			MalformedURLException {
 		init();
-		Class clazz = Class.forName("com.letv.taskplugin.Main");
+		Class clazz = Class.forName("com.deve.timeschedule.Main");
 		Object scheduler = clazz.newInstance();
 
 		Method method = clazz.getMethod("start", new Class[] {});
