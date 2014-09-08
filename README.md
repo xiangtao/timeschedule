@@ -1,5 +1,7 @@
 timeschedule
 ============
+timeschedule 一个简单的定时任务调度容器，可以满足需要定时任务的应用，已经应用在生成环境中了，大家可以放心使用
+
 主题：错误: 必须限制口令文件读取访问 解决方法
 cacls ./jmxremote.password /P Administrators:R
 

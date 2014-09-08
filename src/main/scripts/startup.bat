@@ -1,4 +1,4 @@
-java -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=1090 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=true -Dcom.sun.management.jmxremote.password.file=../conf/jmxremote.password -Dcom.sun.management.jmxremote.access.file=../conf/jmxremote.access -cp ../app/taskplugin-0.0.4.jar;../app/log4j-1.2.14.jar;../conf/ com.letv.taskplugin.classloader.ECBootstrap
+java -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=1090 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=true -Dcom.sun.management.jmxremote.password.file=../conf/jmxremote.password -Dcom.sun.management.jmxremote.access.file=../conf/jmxremote.access -cp ../common/timeschedule-0.0.1.jar;../common/log4j-1.2.14.jar;../conf/ com.deve.timeschedule.boot.Bootstrap
 
 PAUSE
 
