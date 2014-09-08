@@ -15,7 +15,7 @@ timeschedule 一个简单的定时任务调度容器，可以满足需要定时�
 
 ### configure own job
 * conf/scheduler.xml to configure job
-1. <job></job> label mean one job <class> is your Job implement for CoreJob,necessary
+1. ```<job></job> ```label mean one job <class> is your Job implement for CoreJob,necessary
 2. <params> config your job required paramter,not necessary.
 3. <trigger> config crontab expression,necessary
 example:
