@@ -1,7 +1,8 @@
 timeschedule
 ============
 timeschedule 一个简单的定时任务调度容器，可以满足需要定时任务的应用，已经应用在生成环境中了，大家可以放心使用
-timeschedule is a simple time task container.
+
+* timeschedule is a simple time task container.
 
 
 ## How to use it:
