@@ -28,10 +28,9 @@ public class Server {
 						String line = in.readLine();
 						if (ConfigUtil.getShutDownCommand().equalsIgnoreCase(
 								line)) {
-							logger.info("shutting down");
+							logger.info("to shutting down.");
 							// stop scheduler container
 							Main.stop();
-
 							in.close();
 							s.close();
 							socket.close();
