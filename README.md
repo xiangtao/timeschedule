@@ -47,4 +47,4 @@ example:
 
 ## How to run in local
 1. git clone git@github.com:xiangtao/timeschedule.git
-2. maven clean package
+2. mvn clean package
