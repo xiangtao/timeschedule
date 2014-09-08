@@ -13,6 +13,14 @@ timeschedule 一个简单的定时任务调度容器，可以满足需要定时�
 5. cd conf,chmod 700 jmxremote.password
 6. cd bin, ./startup.sh to start timeschedule
 
+
+## implement CoreJob
+* import timeschedule-xxx.jar 
+* write a class to extend CoreJob.java ,overwrite run method
+* package a jar file for your project and put it into schedule container app directory
+* configure your job in scheduler.xml
+
+
 ### configure own job
 ```
 * conf/scheduler.xml to configure job
@@ -42,8 +50,6 @@ example:
 	</Job>
 </Jobs>
 ```
-
-
 
 ## How to run in local
 1. git clone git@github.com:xiangtao/timeschedule.git
